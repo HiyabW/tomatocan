@@ -1,0 +1,101 @@
+//CALENDAR.SCSS: This stylesheet is for panels found in views/layouts and for users/controlpanel 
+
+/* _maincalendar */
+
+#calendar td {
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #dfdada;
+    height: 0px;
+    font-size: 14px;
+    vertical-align: middle !important;
+  }
+  
+  #shows-button-panel {
+    padding-top: 25px;
+  }
+  
+  #calendar-event {
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  
+  #calendar-host {
+    display: block;
+    font-size: 1.50rem;
+  }
+  
+  /* CSS for users/controlpanel */
+  #controlpanel-events {
+    margin-top: 60px;
+    right: 15.5%;
+  }
+  
+  /* This stylesheet is used for the calendar in home page and drop-in page */
+  th {
+    font-size: 12px;
+    padding: 6px;
+    border: 1px solid #999;
+    background: #8C1D40;
+    text-align: center;
+    width: 14.2857142857143%;
+  }
+  
+  td {
+    font-size: 10px;
+    padding: 6px;
+    border: 1px solid #999;
+    background: #FFF;
+    color: #020202;
+    height: 150px;
+    vertical-align: top;
+    font-size: 16px;
+    overflow: hidden;
+  }
+  
+  .today {
+    background-color: #D7F2FF;
+  }
+  
+  #events .caler {
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .buttonContainer button {
+    width: 200px;
+    float: center;
+    cursor: pointer;
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #8C1D40;
+    color: white;
+  }
+  
+  .buttonContainer button:hover {
+    background-color: #d7d4d4;
+    color: black;
+  }
+  
+  .tabPanel {
+    height: auto;
+    background-color: gray;
+    color: white;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: none;
+  }
+  
+  .expand {
+    background: none;
+    padding: 0;
+    border: none;
+    font-family: arial, sans-serif;
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
+  }

@@ -1,0 +1,97 @@
+//HOME.SCSS: This is all the css specific to the HOME page
+
+
+#clockdiv {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  #clockdiv>div {
+    background: #8C1D40;
+    border-radius: 10px;
+    display: inline-block;
+    height: 80px;
+    width: 70px;
+  }
+  
+  #clockdiv div>span {
+    display: inline-block;
+    padding-top: 0px;
+  }
+  
+  #clockdivstudy {
+    color: #fff;
+    display: inline-block;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  #clockdivstudy>div {
+    background: #8C1D40;
+    border-radius: 10px;
+    display: inline-block;
+    height: 80px;
+    width: 70px;
+  }
+  
+  @media only screen and (max-width: 500px) {
+  
+    #calendar {
+      padding-left: 20px;
+      padding-right: 0px;
+    }
+    
+    #rewards, #connect {
+      padding-top: 20px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  
+    .enter_email {
+      width: 120px;
+    }
+  }
+  
+  @media only screen and (max-width: 570px) {
+    .row {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .livestreamInfo {
+      border: 3px solid #8C1D40;
+      margin-left: 20px;
+      padding: 5px;
+    }
+  
+    .livestreamInfo h3 {
+      color: #8C1D40;
+      float: left;
+      font-size: 25px;
+    }
+  
+    .livestreamInfo h4 {
+      padding-left: 10px;
+      clear: left;
+    }
+  }
+  
+  //This stylesheet is for the Create Perk form.
+  #suggestedPerks {
+    margin-top: 20px;
+  }
+  
+  @media only screen and (max-width: 992px) {
+    #suggestedPerks {
+      position: inherit;
+      clear: both;
+      float: left;
+    }
+  
+    #priceField {
+      width: 60%;
+    }
+  }

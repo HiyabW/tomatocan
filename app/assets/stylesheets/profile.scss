@@ -1,0 +1,36 @@
+//PROFILE.SCSS: Contains the CSS for the User's profile page
+
+//Page header "authorform"
+#profileBanner {
+	height: 300px;
+	margin-bottom: 40px;
+}
+#profileBanner img {
+	object-fit: cover;
+	min-width: 100%;
+	max-width: 100%;
+}
+#profileHeader {
+	text-align: center;
+	margin-top: -210px;
+	margin-bottom: 0px;
+}
+#profileImage {
+	border: 1px solid $brand-primary;
+	height: 200px;
+	width: 200px;
+	//centers and crops images
+	object-fit: cover;
+}
+#profileName {
+	text-transform: capitalize;
+	font-size: 3.0em;
+	font-weight: 700;
+	padding: 2px;
+}
+
+//Edit user profile tab
+.form-control {
+	//adds space to the bottom of fields because they're too squished
+	margin-bottom: .5rem;
+}

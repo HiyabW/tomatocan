@@ -1,0 +1,165 @@
+//GLOBALS.SCSS: The following css can be found on multiple pages throughout the site. This includes FONTS, headers/footers, 
+
+
+//Redefine the bootstrap default settings to better represent ThinqTV
+$brand-primary: #8C1D40; //ASU Maroon
+$brand-secondary: #FFB704; //ASU Gold
+$brand-gray: #DADADA; // light grey
+$brand-white: #F0F0F0;
+$brand-black: #222222;
+
+$link-hover-decoration: underline !default;
+
+@import url("https://use.typekit.net/fxy5ytx.css");
+
+$font-family-sans-serif: Helvetica;
+
+
+$border-radius-base: 0px !default;
+$border-radius-large: 0px !default;
+$border-radius-small: 0px !default;
+$navbar-margin-bottom: 0px !default;
+
+main {
+  flex: 1 !important;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  padding-top: 0px;
+  display: flex !important;
+  min-height: 100vh !important;
+  flex-direction: column !important;
+  overscroll-behavior: none !important;
+}
+
+//This is all the css for Fonts
+h1.white {
+    color: #fff;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    text-shadow: 0px 4px 4px #000;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+  h1.maroon {
+    color: #8C1D40;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    text-shadow: 1px 2px 3px #555;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+  h2 {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 41px;
+  }
+
+.img-xs {
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+}
+
+.navbar-default {
+  background-color: $brand-primary;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+$overlaid-text: 0 0 4px rgba(0, 0, 0, .8) !important;
+
+#error_explanation {
+  color: #f00;
+
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+//This is all the css used for the footer
+footer {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+  margin-top: 50px;
+  text-align: left;
+  background-color: $brand-primary;
+  font-family: Helvetica;
+  font-size: 12px;
+}
+
+#copyright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+
+footer a.f-link {
+  color: $brand-gray;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+footer p.f-header {
+  color: $brand-secondary;
+  font-size: 14px;
+}
+
+footer div.col-sm-3 {
+  font-size: 14px;
+}
+
+footer small {
+  color: $brand-secondary;
+}
+
+
+//This is all the css used for the header/navbar
+.navbar-btn {
+  margin-right: 25px;
+
+  .btn-primary {
+    color: $brand-gray;
+    background-color: $brand-primary;
+    ;
+    border-color: #771936;
+    font: "Helvetica"
+  }
+
+  .btn-default {
+    color: $brand-secondary;
+    background-color: $brand-primary;
+    border-color: $brand-secondary;
+    font: "Helvetica"
+  }
+}
+
+//when hovering over logo make it slightly bigger
+#navbarLogo {
+  &:hover {
+    transform: scale(1.15) rotate(-12deg);
+  }
+}

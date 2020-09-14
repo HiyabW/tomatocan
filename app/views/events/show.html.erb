@@ -16,7 +16,8 @@
 <!-- TOP HALF -->
 
 <div class="pt-5 pb-3">
-    <h1 class="maroon text-center text-dark pb-1"><%= @event.name %>! </h1>
+    <h1 class="maroon text-center pb-1"><%= @event.name %>! </h1>
+    <h2 class="text-center mb-2"><small>Come Join the <%= @event.topic.upcase %></small></h2>
     <p class="text-center"> <small> Hosted by <%= link_to @user.name, user_profile_path(@user.permalink) %> </small></p>
 </div>
 
