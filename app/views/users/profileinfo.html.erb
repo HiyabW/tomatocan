@@ -2,24 +2,14 @@
 
 
 
-<% @title=" edit user profile "  %>
+
  <div class = "container-fluid">
               <%= render 'layouts/flash_messages' %>  
-              <% if current_page?("/"+current_user.name.downcase+"/profileinfo") %>
-                <!-- Applies the necessary padding when the page is rendered alone.-->
-              <% end %>
-                 <h1 class = "pl-5 pt-2">Edit Profile</h1>
             </div>
 
-  <div class="container ">
-    <div class="col-lg-12">
+    <div class="col-lg-12 px-5 my-5">
       <%= form_for @user, :html => {:multipart => true} do |f| %>
-      <div class="card border-primary">
-
-        <h5 class="card-header bg-primary text-white">
-          About
-        </h5>
-        <div class="card-body">
+        <div>
 
           <div class="row" >
           
@@ -27,7 +17,7 @@
           <!-- Profile Picture -->
             <div class="col-md-6" >
               <div class="form-group">
-                <h3><%=f.label :name, "Profile Image" %></h3>
+                <h2><small><b><%=f.label :name, "Profile Image" %></b></small></h2>
                 <% if @user.profilepic.present? && @user.profilepic != '' %>
                   <%= image_tag(@user.profilepic.url.to_s, :class => "img-circle", :height => "150", :width => "150", :id => "profileInfoImage") %>
                 <% else %>
@@ -35,14 +25,14 @@
                 <% end %>
                 <br>
                   <%= f.file_field :profilepic, :class => "pt-2" %>
-                <p class="help-block">150px &times;</p>
+                <p class="help-block"><small>150px * 150px is best</small></p>
               </div>
             </div>
 
             <!-- Header -->
             <div class="col-md-6">
               <div class="form-group">
-                <h3><%=f.label :name, "Banner Image" %></h3>
+                <h2><small><b><%=f.label :name, "Banner Image" %></b></small></h2>
                 <% if @user.bannerpic.present? && @user.bannerpic != '' %>
                   <div id="profileInfoBanner">
 
@@ -55,7 +45,7 @@
                   </div>
                 <% end %>
                 <%= f.file_field :bannerpic, :class => "pt-4" %>
-                <p class="help-block">1500px &times; 300px is best</p>
+                <p class="help-block"><small>1500px * 300px is best</small></p>
               </div>
             </div>
           </div>
@@ -64,7 +54,7 @@
           <!-- Name -->
           <div class="form-group" style="margin-top:0px">
               <div style="margin-bottom:-15px">
-                <h3><%= f.label :name, "Name" %></h3>
+                <h2><small><b><%= f.label :name, "Name" %></b></small></h2>
               </div>
               <%= f.text_field :name, maxlength: 50, :type => "name", :class => "form-control", placeholder: "This could be your name or your organization's name" %>
           </div>
@@ -72,28 +62,25 @@
           <!-- About You -->
           <div class="form-group">
             <div style="margin-bottom:-14px">
-              <h3><%=f.label :name, "About you" %></h3>
+              <h2><small><b><%=f.label :name, "About you" %></b></small></h2>
             </div>
             <%= f.text_area :about, placeholder: 'Tell us a little about you or your organization', :class => "form-control" %>
           </div>
 
           <!-- Three Topics -->
           <div class="form-group">
-            <div style="font-size:25px; margin-bottom:-7px;"><%=f.label :name, "Conversation Topics" %></div>
-            <%= f.text_field :genre1, :class => "form-control", placeholder: "Topic 1" %>
-            <%= f.text_field :genre2, :class => "form-control", placeholder: "Topic 2" %>
-            <%= f.text_field :genre3, :class => "form-control", placeholder: "Topic 3" %>
+            <h2><small><b><%=f.label :name, "What Topics Interest You?" %></b></small></h2>
+            <p>You may choose up to three</p>
+            <%= f.text_field :genre1, :class => "form-control w-75", placeholder: "Topic 1" %>
+            
           </div>
 
           <!-- Cancel and Save Buttons -->
-          <div class="btn-group btn-group-lg" id="editProfileButton">
-            <%= link_to 'Cancel', user_profile_path, :class => "btn btn-secondary"%>
-            <%= f.submit "Save Changes", :class => "btn btn-primary" %>
-          </div>
+            <%= link_to 'Cancel', user_profile_path, :class => "btn btn-lg text-primary border-primary mr-3"%>
+            <%= f.submit "Save Changes", :class => "btn btn-lg btn-primary" %>
+         
 
         </div>
-      </div>
-    </div>
   </div>
 
 <% end %>
