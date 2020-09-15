@@ -35,12 +35,11 @@
                 <h2><small><b><%=f.label :name, "Banner Image" %></b></small></h2>
                 <% if @user.bannerpic.present? && @user.bannerpic != '' %>
                   <div id="profileInfoBanner">
-
                     <%= image_tag(@user.bannerpic.url.to_s, :class => "img-responsive w-75", :style => "height:150px; margin-top:-15px", :id => "userBannerImage")%> <br>
                   </div>
                 <% else %>
                   <div id="profileInfoBanner" style="margin-top:20px;">
-                    <%= image_tag("crowddark.png", :class => "img-responsive w-75", :style => "height:130px; margin-top:-13px", :id => "userBannerImage")%> <br>
+                    <%= image_tag("profile_banner.png", :class => "img-responsive w-75", :style => "height:130px; margin-top:-13px", :id => "userBannerImage")%> <br>
 
                   </div>
                 <% end %>
