@@ -70,7 +70,16 @@
           <div class="form-group">
             <h2><small><b><%=f.label :name, "What Topics Interest You?" %></b></small></h2>
             <p>You may choose up to three</p>
-            <%= f.text_field :genre1, :class => "form-control w-75", placeholder: "Topic 1" %>
+            <div class="form-inline">
+              <%= f.text_field :genre1, :class => "form-group form-control w-75", placeholder: "Topic 1" %>
+              <%= link_to 'Add', :class => "btn btn-primary", :onclick => "<h1>HELLOOOOOOO</h1>" %>
+            </div>
+            <br>
+
+            <button><p>Feminism +</p></button>
+            <button><p>Racial Equality +</p></button>
+            <button><p>Immigration +</p></button>
+            <button><p>Election +</p></button>
             
           </div>
 
