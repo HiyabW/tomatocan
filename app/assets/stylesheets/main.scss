@@ -1,15 +1,18 @@
 //MAIN.SCSS: Imports all stylesheets
-@import "globals";
-@import "font-awesome";
-@import "profile";
-@import "events";
-@import "calendar";
-@import "home";
 @import "faq";
+@import "home";
+
 //Overrides Bootstrap-defined variables
 $primary: #8C1D40;
 $baseFontFamily: Helvetica !default;
 
+@import "font-awesome";
+@import "globals";
+@import "profile";
+@import "events";
+
+
+@import "calendar";
 @import "bootstrap";
 
 
